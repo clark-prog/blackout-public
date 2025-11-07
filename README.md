@@ -1,428 +1,281 @@
 ![Blackout Logo](2.svg)
 
-# This is what a 72-hour "Rage Sprint" looks like.
+# BLACKOUT — GTM behavior you can verify
+
+**Blackout is a GTM Compliance platform** (RegTech × MarTech) that verifies what actually runs in the browser after **“Reject All”** and certifies it against the **Blackout Trust Standard (BTS)**.  
+We don’t grade influence. **We verify behavior.**
 
 ---
 
-## November 3, 2025. 11:18 AM.
+## What is Ƀłⱥȼҟꝋᵾⱦ?
 
-**Eight hours** after visiting a website. **Once.** No form fill. No demo request. Just browsing.
-
-I get this email:
-
-> **From:** Sarah Baker <sarah.baker@use-warmly.ai>
-> **Subject:** Caught your Warmly site visit
->
-> Hey Clark
->
-> Looks like you were exploring Warmly.
->
-> Warmly engages high-intent leads and triggers instant outreach—no manual work.
->
-> Open to a 15-minute demo?
->
-> Best,
-> Sarah
->
-> Business Development Representative
-> Warmly
->
-> **P.S. If you don't want to receive my email just let me know :)**
-
-Well Sarah, I didn't want to receive **this** fucking email... but here we are.
+**Continuous, disclosure-grade verification** for hidden tracking and white-label surveillance.  
+Detect what’s really running, diff it against what’s disclosed, and **auto-generate the receipts**.
 
 ---
 
-## The 171,738-Line Receipt
+## Why Blackout exists
 
-So I downloaded everything.
+- Everyone understands **SOC2/ISO**. Security earned its standard.  
+- **Sales & marketing never did.** Vendors hid behind cookie banners and pay-to-play rankings while identity tech, session replay, and ad pixels still fire **after “Reject All.”**  
+- Blackout makes GTM conduct **legible, testable, and enforceable**—with receipts.
 
-**Size:** 32MB uncompressed
-**Lines:** 155,984 lines of network traffic
-**Every single HTTP request. Every tracking call. Every surveillance vendor.**
-
-Here's what I found on **YOUR** site, Warmly:
+> We don’t argue intent. **We publish timing and URLs.**
 
 ---
 
-## The 9 Vendors on ONE Page
+## What Blackout does (at a glance)
 
-You're selling visitor identification software... but you don't trust your own product.
+1. **Detect** — Capture post-consent timelines (initiator chains, request URLs, timestamps).  
+2. **Diff** — Compare runtime vendors to your **subprocessor list** and stated policy.  
+3. **Prove** — Hash the evidence pack and issue (or deny) a **BTS badge** (Bronze/Silver/Gold).  
+4. **Enforce** — Badges can be **suspended or revoked** on critical drift. Public log.
 
-**You use your competitors.**
-
-| Vendor | Category | What They Do |
-|--------|----------|--------------|
-| **RB2B** | Deanonymization | YOUR DIRECT COMPETITOR |
-| **Koala** | Deanonymization | YOUR DIRECT COMPETITOR |
-| **Vector** | Deanonymization | YOUR DIRECT COMPETITOR |
-| **PostHog** | Behavioral Analytics | **800+ tracking events per session** |
-| **Segment** | CDP | **Loaded TWICE** (2 different API keys) |
-| **6sense** | Intent Data | B2B account identification |
-| **HubSpot** | Marketing Automation | Form tracking + emails |
-| **BDEX/IceXYZ** | Data Exchange | Third-party pixel network |
-| **Default.com** | Form Intelligence | Capture & route |
-
-**Total: 11 surveillance vendors on one page.**
-
-Plus: Google Tag Manager, Intercom, Reddit Pixel, Upvert Pixel, Wistia, Cloudflare Insights.
+All verification is performed **offline**. This site runs **no third-party trackers**.
 
 ---
 
-## The Problem
+## The Blackout Trust Standard (BTS)
 
-**The real problem isn't data. It's fabricated access.**
+**BTS is the evidence-based compliance standard for go-to-market behavior online.**
 
-Deanonymization pretends a relationship exists, then routes it to sales as if consent came later. GTM teams inherit the mess—and the backlash.
+**Controls (evidence, not opinions):**  
+- **Consent governance** — no identity/replay/ads fire post-reject  
+- **Disclosure parity** — your policy ↔ your runtime  
+- **De-anonymization** — explicit, verifiable opt-in or it’s out  
+- **Proof** — initiator chains, request URLs, timestamps  
+- **Attestation** — host a manifest at `/.well-known/blackout.json`  
+- **Enforcement** — badge can be **suspended or revoked**
 
-**White-label "enrichment" infrastructure** hides undisclosed partners across your GTM stack. Session replay + ABM multiply exposure across **5-10 vendors per pageview.**
+**Badge tiers:**  
+- **BTS-Bronze (≥70)** — No identity/replay/ads post-reject; GPC honored; substantial subprocessor parity  
+- **BTS-Silver (≥80)** — Bronze + no de-anon without explicit opt-in; full disclosure parity  
+- **BTS-Gold (≥90)** — Silver + no session replay or fingerprinting; regional consent gating verified
 
-Legal risk aside, **nothing kills win rates faster than manufactured familiarity.**
-
-Buyers remember who crossed the boundary—and they tell their network.
-
----
-
-## Who This Hurts
-
-### **Enterprise Teams**
-
-| Role | The Pain |
-|------|----------|
-| **CMOs / CGOs** | Pitch-slap GTM kills brand equity. Mystery leads born from gray-area data. |
-| **Sales Leaders** | Prospects already hostile before first touch. Win rates tank. |
-| **RevOps** | Ghost vendors across the stack. Can't route what you can't see. |
-| **Legal / Privacy** | Policy says one thing. Runtime reality tells a different story. |
-| **Compliance** | Regulatory anxiety. Need proof, not promises. Screenshots aren't enough. |
-| **Founders** | One viral "creepy marketing" post destroys months of brand building. |
-
-### **Individuals**
-
-| The Pain | What Happens |
-|----------|--------------|
-| **AI SDR spam** | Visit one site. "Sarah" from Central India wants to "connect on LinkedIn." |
-| **Creepy but can't prove it** | You know they're tracking you. But no screenshots, no timestamps, no domains. |
-| **They won't stop** | Asked to unsubscribe. Got 3 more emails. Now what? |
-| **Vendors follow you everywhere** | RB2B and Koala on every B2B site. Block one, they pop up somewhere else. |
+**Badge label (alt):**  
+`Blackout Trust Standard — {Tier} — Last verified: YYYY-MM-DD`
 
 ---
 
-### “What I’m Building”
+# BLK — The Blackout Compliance Framework (v0.1)
 
-One-Liner
-“Blackout makes B2B surveillance legible and stoppable—we catch the RB2Bs of the world in real time, publish proof, and force GTM teams to play by the rules.”
-
-The Pain
-
-Web visitors are deanonymized pre-consent via reverse IP + data brokers.
-Buyers get harassed with AI-crafted outreach they never opted into.
-Legal/privacy teams can’t prove who’s actually spying because runtime evidence is messy.
-What Blackout Delivers
-
-CLI + API scanner (Playwright + vendor signatures) that fingerprints surveillance stacks, hashes artifacts, and spits out court-ready HTML dossiers.
-Supabase-backed waitlist + intake already capturing Enterprise, Sensor, and Trust Standard cohorts through one flow.
-Trust Standard (BTS): first GTM compliance framework with auditable control families (BTS-001..008) and revocable Bronze/Silver/Gold badges.
-Og/tweet-ready marketing site showing evidence receipts, badge tiers, and waitlist CTA—all pushing to /api/waitlist.
-Security Posture (Yes, we did the homework)
-
-SSRF sealed, rate-limited, IPs hashed, request-size capped, zero cookie hoarding.
-RLS enforced on Supabase; migrations scripted to add new cohort flags.
-Attack surface now visible: 24 vendor signatures → 46 blocking rules shared across scanner, extension, and DB.
-Roadmap Signals
-
-Extension MVP (Manifest V3 + declarativeNetRequest) for live blocking.
-Behavioral + ML detection for obfuscated or server-side pivots.
-Community intel loop—crowd-reported signatures, Slack/GitHub automation.
-“Shodan/Kali mode” for active recon and honeypots when customers want counter-surveillance.
-Why Hackers/Cyber Folks Should Care
-
-This is SOC2-for-GTM with receipts; we’re exposing abuse vectors that regulators, CISOs, and privacy teams will hammer on.
-Lots of fun surface area: CNAME cloaking, fingerprinting hooks, deanonymization timing attacks, supply-chain policy diffs.
-Need collaborators to harden detection, break evasions, and build the badge verification tooling.
-How to Engage
-
-Review vendor signatures or drop new ones.
-Help stress-test the scanner/extension against obfuscation tricks.
-Join founding cohort or advise on BTS control tuning.
-
-## The Full Investigation
-
-I spent a week reverse-engineering the visitor deanonymization industry.
-
-**887,000+ lines of evidence analyzed**
-**170+ surveillance vendors documented**
-**48 complete tracking scripts captured**
-**36 working detection signatures built**
-**142MB of HAR files**
-
-### The Receipts:
-
-**4 Complete Vendor Dossiers:**
-- **RB2B:** Support docs say "we have no API" while their website advertises "our entire suite of APIs" and they publish a complete Postman collection. Three official sources. Two completely opposite statements.
-- **Warmly:** 171K-line HAR, 11-vendor stack, competitor dependencies exposed
-- **Koala:** Official "deanonymizing" admission captured from their own marketing
-- **Apollo:** 710K-line HAR, 10+ vendor stack documented
-
-**PostHog Surveillance:**
-- 43 captured telemetry events from RB2B's own site
-- 800+ tracking events per session on Warmly's site
-- Every click, mouse movement, scroll, form interaction
-
-**Complete Vendor Database:**
-- 250+ vendors researched
-- 15 production-ready detection signatures
-- Multi-method detection (scripts, globals, network, cookies, inline code)
+Operational controls, scoring, and schemas for verifying GTM runtime behavior against the **Blackout Trust Standard (BTS)**.
 
 ---
 
-## What I Built in 48 Hours
+## Control Library (v0.1)
 
-**73 commits. One rage sprint. One person who didn't know what Git Pull meant.**
+IDs → check → suggested remediation.
 
-### Production Scanner
-- **1,034 lines of code**
-- Playwright browser automation
-- Multi-method vendor detection
-- HTML report generation with chain-of-custody
-- ASCII art banner with color cycling (because fuck it, why not)
+- **BLK-001 Undisclosed Subprocessor**  
+  **Check:** vendor in `detections` ∉ `disclosures`.  
+  **Remediate:** add vendor to subprocessor list; republish policy with version/date.
 
-### TriMark Visual System
-- **185 lines of code**
-- Mathematical precision equilateral triangle
-- Framer Motion path drawing animations
-- Stage-specific edge highlighting (DETECT → DIFF → PROVE)
+- **BLK-002 De-anonymization Without Notice**  
+  **Check:** `category = "deanonymization"` detected; no explicit identity-resolution notice/basis in policy.  
+  **Remediate:** add clear notice, lawful basis (opt-in/opt-out), retention, DPA references.
 
-### Ghostline Design System
-- Ghost in the Shell-inspired dark palette
-- Scanning animations (8s linear infinite sweep)
-- Color system: ink-950/900/800 (backgrounds), cyan/violet/green (accents)
+- **BLK-003 Session Recording Without Consent**  
+  **Check:** `category = "session-replay"` loads before recorded consent.  
+  **Remediate:** gate behind CMP; honor region logic and GPC.
 
-### Working Detection Signatures
-- **15 production vendors**
-- RB2B, Clearbit, 6sense, Demandbase, Koala, Warmly, FullStory, etc.
-- Weighted confidence scoring (identity=6-7, network=4-7, script=3-5)
-- Only ship findings ≥0.50 confidence
+- **BLK-004 Enrichment on PII Without Basis**  
+  **Check:** enrichment calls after form submit; disclosures omit enrichment vendors/uses.  
+  **Remediate:** disclose enrichment purpose, vendors, retention; update DPA/ROPA.
 
-### Evidence Samples
-- **Enterprise Evidence Pack:** 2-page PDF with executive summary, scorecard, gap details, remediation guidance, chain-of-custody
-- **Sensor Proof Card:** Personal receipt with vendor list, categories, detection methods, timestamps
+- **BLK-005 Shadow Cookies / CNAME Cloak**  
+  **Check:** third-party tracking via first-party CNAME; cookies set pre-consent.  
+  **Remediate:** disable until consent; document vendor + purpose; adjust DNS/CSP.
 
----
+- **BLK-006 “Instant Outreach” from Web Events**  
+  **Check:** webhook to SDR/LLM using visit-level signals; no disclosure of automated decisioning.  
+  **Remediate:** disclose automated processing; provide opt-out and escalation path.
 
-## The Products
+- **BLK-007 Consent Timing Violation**  
+  **Check:** any identity/replay/ads request timestamp < first consent accept; or persists after **Reject All**.  
+  **Remediate:** enforce true prior consent; block scripts until state is known.
 
-**One detection engine. Two outputs. Hard firewall between them.**
+- **BLK-008 GPC / DNT Not Honored**  
+  **Check:** `Global Privacy Control` or browser DNT ignored in regions where honored/claimed.  
+  **Remediate:** respect signals consistently; update policy to match behavior.
 
-### 🏢 Blackout for Teams (Enterprise)
+- **BLK-009 Region Gating Failure**  
+  **Check:** EU/UK/CA visitors receive identity/replay/ads despite regional gating claims.  
+  **Remediate:** fix geo logic; add region tests to CI; update manifests.
 
-**Disclosure Assurance for Legal, GRC & RevOps**
+- **BLK-010 Fingerprinting / Evasion**  
+  **Check:** canvas/audio/font fingerprinting or **S3/CDN alias** evasion (e.g., `b2bjsstore` S3).  
+  **Remediate:** remove non-essential fingerprinting; stop alias evasion; disclose unavoidable signals.
 
-**What You Get:**
-- **One-time commissioned scans** — Not SaaS. Per-pack invoicing.
-- **Evidence Packs (PDF + ZIP)** — Executive summary, scorecard (BLK-001–BLK-006 controls), artifacts (HAR files, screenshots, policy snapshots), remediation text with ownership + due dates
-- **Chain-of-custody** — SHA-256 hashing, ISO 8601 timestamps, verifiable evidence trail
-- **Confidence scoring** — 0.0–1.0 scale, only ship findings ≥0.50
+- **BLK-011 Policy–Runtime Mismatch**  
+  **Check:** policy states “no X” but runtime shows X (or stale subprocessor revision).  
+  **Remediate:** bring runtime into compliance or update policy; date/version the change.
 
-**Pain → Outcome:**
-- **Policy diverges from runtime** → Single view of truth legal & ops both sign
-- **Uncontrolled vendor expansion** → Undisclosed vendors flagged with ownership
-- **Inventory ≠ disclosure assurance** → Disclosure gaps called, not just trackers listed
-- **Regulatory anxiety** → Counsel-ready proof with confidence & evidence strength
-
-**Add-ons:**
-- Watchdog (monitor 3 competitor domains)
-- Counsel Share Link (read-only access for external counsel)
-- Notion/Jira export
-
-**No continuous monitoring. No recurring fees. Commission a scan when you need one.**
+- **BLK-012 Unattributed Pixel / Unknown Vendor**  
+  **Check:** network host not listed in disclosures or vendor registry.  
+  **Remediate:** identify owner; disclose or remove; add to vendor inventory.
 
 ---
 
-### 🛡️ Blackout Sensor
+## Risk & Scoring
 
-**Personal, not predatory: Proof Cards, Filters, and Opt-Outs you control.**
+- **Severity (S):** 1–5 (user harm / regulatory exposure)  
+- **Exposure (E):** pages affected × traffic class `{WEBSITE|APP|AUTH}` ⇒ weight `{1|2|3}`  
+- **Remediation Difficulty (R):** 1–3 (effort/time/risk)
 
-**What You Get:**
-- **Proof Cards** — Clean, shareable receipts (vendors detected, domains, scripts, timestamps, chain-of-custody)
-- **Receipts Vault** — Save detection history, optional public share links
-- **Inbox Filters Pack** — Gmail/Outlook filters to auto-tag and archive AI SDR emails
-- **Personal Blocklist Export** — One-click export to uBlock Origin / AdGuard
-- **Opt-Out / Do-Not-Sell Pack** — Jurisdiction-aware (GDPR/CCPA) templates, prefilled with your detections
+**Non-Compliance Score = (S × E) + R** (per control, capped by control policy)
 
-**Pain → Outcome:**
-- **Pitch-slapping & AI-SDR spam** → Inbox Filters Pack auto-routes it away
-- **"Creepy but can't prove it"** → Proof Card + Vault (your evidence, your terms)
-- **They won't stop contacting me** → Opt-Out / Do-Not-Sell Pack enforces do-not-contact
-- **Same vendors follow you** → Personal Blocklist Export (uBlock/AdGuard)
+**Critical flags:**  
+- If **BLK-001** or **BLK-002** present → mark **CRITICAL**.  
+- If **BLK-007** present with identity/replay/ads → mark **CRITICAL**.
 
-**Guardrails:**
-- No bulk crawls
-- No competitor monitoring
-- No enterprise Evidence Packs
-- Flat-rate SaaS
+**Badge guidance (map to BTS):**
+- `Score < 10` and **no Critical** → candidate **BTS-Bronze** (if all identity/replay/ads post-reject = none)  
+- `10–19` and **no Critical** → candidate **BTS-Silver** after remediation of disclosure gaps  
+- `≥20` or **any Critical** → **BTS-Denied** until fixes verified  
+- **BTS-Gold** requires **no** session-replay/fingerprinting and clean region gating
 
 ---
 
-**Why the separation?**
+## Minimal UI (week one)
 
-Same detection engine, different outputs. Enterprise users don't get upsold Sensor. Sensor users never see "upgrade to unlock Evidence Pack features."
-
-**No tiers. No holdbacks. No manufactured scarcity.**
-
----
-
-## The Receipts Philosophy
-
-**You can't sell anti-surveillance software while running Heap on your own site.** That's not a product. That's performance art.
-
-### Our Promises:
-
-✅ **No cookies. No tracking.** — blackout.tools itself runs zero surveillance infrastructure
-✅ **Public corrections log** — Accepted AND rejected corrections visible (72-hour SLA for material corrections)
-✅ **Chain-of-custody** — SHA-256 hashing on all evidence artifacts
-✅ **Confidence scoring** — Every finding includes 0.0–1.0 confidence (≥0.50 threshold to ship)
-✅ **No behavioral analytics** — No Heap, no Amplitude, no session replay on our own site
-✅ **Hard lane firewall** — Enterprise and Sensor products stay separated
-
-**We build the thing we said we'd build, or we don't ship.**
+- **Projects:** domain · last scan · score · critical flags · “Download Pack”  
+- **Findings:** detections list & gaps list with evidence chips `{script|network|global|cookie|inline}`  
+- **Controls:** pass/fail by BLK ID with remediation copy & owners
 
 ---
 
-## By the Numbers
+## Data Model (JSON Schemas)
 
-| Metric | Value |
-|--------|-------|
-| **Total Commits** | 73 (average: 1.5 commits/hour for 48 hours) |
-| **Production Scanner** | 1,034 LOC |
-| **TriMark Component** | 185 LOC |
-| **Vendor Signatures** | 15 working (RB2B, Clearbit, 6sense, Demandbase, etc.) |
-| **Evidence Captured** | 887,000+ lines (HAR files, network traces, policy snapshots) |
-| **Vendor Database** | 250+ researched, 170+ documented with surveillance tactics |
-| **HAR Files** | 142MB compressed (700MB+ uncompressed) |
-| **Warmly HAR Alone** | 32MB, 155,984 lines, 11 vendors detected |
-| **Code Files** | 973 total (55 TS/React components, 39 vendor research folders) |
+### Detection
+```json
+{
+  "id": "det_01HZZ7N...",
+  "domain": "example.com",
+  "vendor_id": "warmly",
+  "category": "deanonymization",
+  "artifact": { "type": "script", "value": "https://cdn.../warmly.js" },
+  "consent_state": "reject", 
+  "ts_first_seen": "2025-11-05T03:12:30.120Z",
+  "ts_last_seen": "2025-11-05T03:12:30.120Z",
+  "confidence": 0.96,
+  "signals": ["network", "script", "global"]
+}
 
----
 
-## See It Live
 
-Visit **[deployblackout.com](https://deployblackout.com)** to see:
-- Sample Evidence Pack (Enterprise)
-- Sample Proof Card (Sensor)
-- Complete product positioning
-- Early access waitlist
+## The Blackout Ecosystem
 
----
+**One mission: rebuild trust with evidence—not influence.**
 
-## How Detection Works
+### 🏢 Blackout for Teams — *The Console (available)*
+Private audits for Legal/RevOps. Consent timelines, initiator chains, **disclosure-vs-runtime** diffs, and counsel-ready exports. Every vendor called by name in your report.
 
-**DETECT → DIFF → PROVE**
+### 🛡️ Blackout Sensor — *The Shield (roadmap)*
+Opt-in **Proof Cards** and alerts so individuals can see who’s watching before the pitch—and correlate outreach to detections they can share.
 
-### Step 1: DETECT (Multi-Method Vendor Detection)
+### 🔗 BLK — *Blackout Ledger (roadmap)*
+Evidence-hash registry and attestation APIs for CI/security controls. Public **revocation log** and open signature sets.
 
-**5 Detection Layers:**
-1. **Script Fingerprinting** — CDN URLs, loader patterns
-2. **Window Globals** — `window.rb2b`, `window.warmly`, `window.ko`, `window.FS`
-3. **Network Analysis** — Host matching, path patterns, request volumes
-4. **Cookie Inspection** — First-party vs third-party, session vs persistent
-5. **Inline Code Scanning** — Embedded snippets, initialization calls
-
-**Weighted Confidence Scoring:**
-- Identity signals (PII capture, company enrichment): **6-7 points**
-- Network calls to vendor domains: **4-7 points**
-- Script loading: **3-5 points**
-- Inline code snippets: **2-4 points**
-- Window globals: **3-4 points**
-
-**Threshold:** Only ship findings with ≥0.50 confidence. No guessing. No false positives.
-
-### Step 2: DIFF (Disclosure Analysis)
-
-**Compare runtime reality vs. disclosure promises:**
-- Privacy policy parsing (phrase classes + citations)
-- Subprocessor lists (Annex A, vendor schedules)
-- Cookie banners / consent notices
-- Region flags (GDPR, CCPA, PIPEDA)
-
-**Result:** Disclosure gaps with control IDs (BLK-001–BLK-006)
-
-### Step 3: PROVE (Evidence Generation)
-
-**Enterprise Evidence Packs:**
-- Executive summary (KPI grid: detections, gaps, critical findings)
-- Noncompliance scorecard (control ID, severity, status, confidence)
-- Detailed gap findings (script sources, network calls, policy diffs)
-- Artifacts (HAR files, screenshots, policy snapshots)
-- Remediation guidance (ownership, due dates, options)
-- Chain-of-custody (SHA-256 hashes, ISO 8601 timestamps)
-
-**Sensor Proof Cards:**
-- Vendors detected with categories (DEANONYMIZATION, SESSION REPLAY, DATA ENRICHMENT)
-- Detection methods (scripts, network calls, globals, cookies)
-- Timestamps + chain-of-custody
-- Save to Receipts Vault
-- Optional public share link
+> **No on-site scanner.** Verification is offline; evidence packs are shareable with counsel.
 
 ---
 
-## The Mission
+## How it works (verify & certify, not block)
 
-**This shit ends now.**
+**Observe** — Capture post-consent timelines: initiator chains, request URLs, timestamps.  
+**Compare** — Diff runtime vendors against subprocessor/privacy disclosures.  
+**Attest** — Hash the evidence pack (SHA-256); issue **BTS** or remediation.  
+**Enforce** — Badges are **revocable**; critical drift triggers suspension & re-verification.
 
-B2B marketing has become a surveillance-industrial complex. Warmly deanonymized me. "Sarah" (an AI SDR from Central India) emailed me at 3 AM. I never submitted a form, provided my email, or clicked a cookie banner.
+### Detection signals (multi-layer)
+- Script hosts & loader patterns (incl. CDN → **S3** fallbacks)  
+- Window globals & inline init calls  
+- Network patterns (hosts, paths, cache-busting)  
+- Consent timing vs first request  
+- Fingerprinting/replay surfaces
 
-**I just visited their website.**
-
-So I reverse-engineered the entire industry. 887,000+ lines of evidence. 170+ vendors. 48 tracking scripts. 36 working signatures.
-
-**Now I'm making it all public.**
-
-### What I Need:
-
-🔥 **Testers** — Enterprise teams that want to commission Evidence Packs
-🔥 **Intel** — "How the F*ck did they know?" stories from the wild
-🔥 **Early Access** — Individuals who want Sensor (browser extension + Proof Cards)
-
-**Join the waitlist:** [deployblackout.com](https://deployblackout.com)
+**Example evidence line:**  
++186 ms post-reject → s3-us-west-2.amazonaws.com/b2bjsstore/.../reb2b.js.gz
 
 ---
 
-## Tell Me Your Story
+## What Blackout is **not**
 
-**"How the F*ck did they know?" moments:**
-
-- You visit one site. LinkedIn DM arrives 6 hours later.
-- Sales email with your job title, company size, tech stack.
-- "I saw you were researching [competitor]..."
-- Personalized video from CEO of a company you never heard of.
-
-**Drop your story via email:** intel@blackout.tools
-
-We'll add it to the database. Document the vendor. Build the signature. Make it public.
+- Not a browser, ad-blocker, or on-site widget  
+- Not pay-to-play rankings or “magic shapes”  
+- Not a legal opinion—**we provide counsel-ready evidence**, not promises
 
 ---
 
-## Contact
+## Manifest (attestation)
 
-- **Enterprise (Evidence Packs):** enterprise@blackout.tools
-- **Sensor Beta:** Join waitlist at [deployblackout.com](https://deployblackout.com)
-- **Intel / Stories:** intel@blackout.tools
-- **Founder:** [@clarkbbarron](https://www.linkedin.com/in/clarkbarron)
+Publish a machine-readable manifest so buyers can self-check basics.
+
+`/.well-known/blackout.json`
+```json
+{
+  "bts_version": "0.1",
+  "badge": { "tier": "silver", "score": 83, "last_verified": "2025-11-07" },
+  "disclosures": {
+    "policy_url": "https://example.com/privacy",
+    "subprocessors_url": "https://example.com/subprocessors"
+  },
+  "runtime": {
+    "region_gating": true,
+    "consent_gpc_honored": true
+  },
+  "evidence": {
+    "pack_sha256": "7b2c...c1a9",
+    "report_url": "https://example.com/blackout/report.pdf"
+  }
+}
+```
+R## Responsible disclosure & revocation
+
+- **Private remediation window** for badged companies  
+- **Dispute → re-scan → logged outcome**  
+- **Critical breach** (e.g., identity/replay firing post-reject) → **72-hour** remediation or **public suspension**  
+- **Public revocation log** keeps the badge honest
 
 ---
 
-## The Bottom Line
+## RFP clause (copy/paste)
 
-**I visited a website. Eight hours later: cold email.**
-
-So I captured 171,738 lines of network traffic. Exposed 11 surveillance vendors. Documented 887,000+ lines of evidence across 170+ vendors. Built a production scanner in 48 hours.
-
-**Y'all thought I was fucking kidding.**
-
-**Here's proof. Verify it yourself.**
+> Vendor must maintain **BTS-Silver or higher** and host a valid `/.well-known/blackout.json`. Buyer may perform independent runtime verification prior to award and quarterly thereafter. Badge suspension is grounds for reassessment.
 
 ---
 
-**BLACKOUT** — *Receipts over promises.*
+## Roadmap (high-level)
 
-🔥 [deployblackout.com](https://deployblackout.com)
+- Public **revocation log**  
+- **Open signatures** for vendor detection (PRs welcome)  
+- **BLK** attestation & evidence-hash APIs  
+- Partner labs for adversarial testing and signature hardening
+
+---
+
+## Contributing
+
+- Propose vendor signatures (host/path regex, function-chain fingerprints, consent-timing rules)  
+- Submit redacted **Proof Cards** (URLs + timings only; no PII)  
+- File issues with reproducible steps and timestamps
+
+---
+
+## Ethics & privacy posture
+
+- We store **observable runtime facts** (timelines, URLs, initiators).  
+- **No PII. No fingerprinting. No cookie planting.**  
+- Sensor (when available) will be strictly **opt-in**; users choose what to share.
+
+---
+
+## Get certified / Get involved
+
+- **Founding Cohort** — Priority audits & early steering input  
+- **Request an Enterprise Audit** — Legal/RevOps ready  
+- **Join the Sensor Waitlist** — Personal Proof Cards & alerts
+
+**Site:** https://www.deployblackout.com  
+**Contact:** hello@deployblackout.com
