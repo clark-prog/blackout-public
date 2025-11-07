@@ -1,4 +1,4 @@
-# Y'all Thought I Was Fucking Kidding.
+# This is what a 72-hour "Rage Sprint" looks like.
 
 ---
 
