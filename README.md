@@ -105,6 +105,44 @@ Buyers remember who crossed the boundary—and they tell their network.
 
 ---
 
+### “What I’m Building”
+
+One-Liner
+“Blackout makes B2B surveillance legible and stoppable—we catch the RB2Bs of the world in real time, publish proof, and force GTM teams to play by the rules.”
+
+The Pain
+
+Web visitors are deanonymized pre-consent via reverse IP + data brokers.
+Buyers get harassed with AI-crafted outreach they never opted into.
+Legal/privacy teams can’t prove who’s actually spying because runtime evidence is messy.
+What Blackout Delivers
+
+CLI + API scanner (Playwright + vendor signatures) that fingerprints surveillance stacks, hashes artifacts, and spits out court-ready HTML dossiers.
+Supabase-backed waitlist + intake already capturing Enterprise, Sensor, and Trust Standard cohorts through one flow.
+Trust Standard (BTS): first GTM compliance framework with auditable control families (BTS-001..008) and revocable Bronze/Silver/Gold badges.
+Og/tweet-ready marketing site showing evidence receipts, badge tiers, and waitlist CTA—all pushing to /api/waitlist.
+Security Posture (Yes, we did the homework)
+
+SSRF sealed, rate-limited, IPs hashed, request-size capped, zero cookie hoarding.
+RLS enforced on Supabase; migrations scripted to add new cohort flags.
+Attack surface now visible: 24 vendor signatures → 46 blocking rules shared across scanner, extension, and DB.
+Roadmap Signals
+
+Extension MVP (Manifest V3 + declarativeNetRequest) for live blocking.
+Behavioral + ML detection for obfuscated or server-side pivots.
+Community intel loop—crowd-reported signatures, Slack/GitHub automation.
+“Shodan/Kali mode” for active recon and honeypots when customers want counter-surveillance.
+Why Hackers/Cyber Folks Should Care
+
+This is SOC2-for-GTM with receipts; we’re exposing abuse vectors that regulators, CISOs, and privacy teams will hammer on.
+Lots of fun surface area: CNAME cloaking, fingerprinting hooks, deanonymization timing attacks, supply-chain policy diffs.
+Need collaborators to harden detection, break evasions, and build the badge verification tooling.
+How to Engage
+
+Review vendor signatures or drop new ones.
+Help stress-test the scanner/extension against obfuscation tricks.
+Join founding cohort or advise on BTS control tuning.
+
 ## The Full Investigation
 
 I spent a week reverse-engineering the visitor deanonymization industry.
