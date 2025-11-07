@@ -1,4 +1,4 @@
-![alt text](logo_white.svg)
+![alt text](logo_white)
 
 # This is what a 72-hour "Rage Sprint" looks like.
 
