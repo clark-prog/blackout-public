@@ -31,6 +31,26 @@ Blackout makes GTM conduct legible, testable, and enforceable—with receipts.
 
 ---
 
+## The compliance landscape (and why it falls short)
+
+Nothing in the current compliance landscape touches the behavior of GTM functions the way SOC 2/ISO 27001 cover engineering and security.
+
+**What exists:**
+
+- **SOC 2, ISO 27001, HITRUST, PCI, FedRAMP** – Focus on security and privacy controls for systems and data. GTM tooling is in-scope only when it touches production systems, not for marketing behavior or vendor usage.
+
+- **GDPR, CCPA/CPRA, LGPD, ePrivacy, CASL, CAN-SPAM, TCPA** – Regulate consent, lawful basis, email/SMS outreach, and tracking disclosures. They set legal limits but don't provide a certifiable framework or badge that says, "Your marketing team behaves appropriately."
+
+- **IAB Transparency & Consent Framework, DAA AdChoices, NAI** – Advertising industry self-regulation targeting CMPs and ad-tech consent handling; largely unenforced opt-in systems for programmatic advertising, not comprehensive GTM behavior audits.
+
+- **CMP audits (OneTrust, TrustArc)** – Tools to verify consent banners and ad preferences but do not audit the full stack of vendors or pre-consent behavior.
+
+- **Regulatory settlement agreements (e.g., FTC, CNIL)** – After-the-fact enforcement for egregious tracking, but no proactive framework or ongoing assessment model.
+
+**Net:** No mainstream, certifiable compliance framework currently audits GTM/Sales/Marketing behavior end-to-end (vendor disclosure parity, deanonymization practices, pre-consent tracking, AI SDR outreach). That gap is exactly what Blackout's Trust Standard (BTS) is designed to fill.
+
+---
+
 ## What Blackout does
 
 1. **Detect** — Capture post-consent timelines (initiator chains, request URLs, timestamps).
