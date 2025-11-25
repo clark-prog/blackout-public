@@ -184,7 +184,7 @@ zoominfo-gtm-studio/
 
 ## The CEO's Response
 
-![Henry_Schuck_Post](./Screenshot 2025-11-25 100147.png)
+![Henry_Schuck_Post](./Screenshot_2025-11-25_100147.png)
 
 
 When presented with documented evidence of:
