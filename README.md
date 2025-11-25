@@ -1,4 +1,4 @@
-# ZoomInfo GTM Studio: Pre-Consent Surveillance Evidence
+# ZoomInfo GTM Studio: Pre-Consent Tracking Documentation
 
 > **"You can block the researcher. You can't block the evidence."**
 
@@ -8,7 +8,7 @@
 
 On November 25, 2025, ZoomInfo CEO Henry Schuck posted a product demo of GTM Studio on LinkedIn — their AI-powered platform that "identifies person-level website visits."
 
-A security researcher analyzed the GTM Studio landing page and documented extensive pre-consent surveillance infrastructure. The findings were posted as a comment on the CEO's LinkedIn post.
+A security researcher analyzed the GTM Studio landing page and documented extensive pre-consent tracking infrastructure. The findings were posted as a comment on the CEO's LinkedIn post.
 
 **Within minutes, the researcher was blocked.**
 
@@ -73,36 +73,36 @@ Yet on their **own landing page** for this product, they deploy:
 
 You're not a privacy lawyer. You're trying to hit pipeline targets. So why should you care?
 
-### 1. Your Budget Is Buying Legal Exposure
+### 1. Your Budget May Be Buying Legal Exposure
 
-Every dollar spent on vendors with pre-consent violations is a dollar spent on future legal liability. When the class action hits, "we didn't know" isn't a defense — it's an admission of negligence.
+Every dollar spent on vendors with documented pre-consent tracking is a dollar potentially spent on future legal liability. When class actions emerge in this space, "we didn't know" often isn't accepted as a defense — it can be characterized as negligence.
 
-**The question isn't IF this data is actionable. It's IF you'll be named in the complaint.**
+**The question to consider: could this data become actionable in litigation?**
 
-### 2. Your "Intent Data" Is Legally Toxic
+### 2. Your "Intent Data" May Carry Legal Risk
 
-Data collected without consent can't be legally processed. That means:
-- Your lead scores are built on violations
-- Your ABM campaigns target illegally-collected profiles  
-- Your attribution models include tainted signals
+Data collected without proper consent may not be legally processable. That could mean:
+- Your lead scores may be built on problematic data
+- Your ABM campaigns may target profiles collected without consent  
+- Your attribution models may include tainted signals
 
-You're not optimizing. You're compounding liability.
+This is worth evaluating with your legal team.
 
-### 3. Your Customers Are The Plaintiffs
+### 3. Your Customers Could Become Plaintiffs
 
-The people you're tracking without consent? They're the same people you're trying to convert. When they find out (and they will), you haven't just lost a deal — you've created an adversary with standing.
+The people being tracked without consent? They're the same people you're trying to convert. When they find out (and the prevalence of these practices is increasingly public), you may not just lose a deal — you may create an adversary with legal standing.
 
-**Every visitor is a potential plaintiff. Every page view is evidence.**
+**Every visitor is a potential plaintiff. Every page view is potential evidence.**
 
-### 4. Your Vendor's Compliance Is YOUR Compliance
+### 4. Your Vendor's Compliance Affects YOUR Compliance
 
-GDPR Article 26. CCPA 1798.100. Your contracts say "vendor warrants compliance." Courts say you're jointly liable anyway. When ZoomInfo's violations become public record, your legal team will ask: "Who approved this vendor?"
+GDPR Article 26. CCPA 1798.100. Your contracts may say "vendor warrants compliance." Courts have found joint liability regardless. When a vendor's practices become public record, your legal team will ask: "Who approved this vendor?"
 
-That answer is in your Slack history.
+That answer is discoverable.
 
-### 5. Your Competitors Will Use This Against You
+### 5. Your Competitors May Use This Against You
 
-Imagine losing an enterprise deal because the prospect's security team Googled your martech stack and found this evidence pack. Imagine the RFP question: "Do you use vendors with documented pre-consent violations?"
+Imagine losing an enterprise deal because the prospect's security team researched your martech stack. Imagine the RFP question: "Do you use vendors with documented pre-consent tracking?"
 
 **Your vendor choices are discoverable. Choose accordingly.**
 
@@ -112,16 +112,16 @@ Imagine losing an enterprise deal because the prospect's security team Googled y
 
 Marketing has operated in a "move fast, ask forgiveness" mode for 15 years. That era is ending.
 
-The surveillance infrastructure that powered the "growth at all costs" playbook is now:
+The tracking infrastructure that powered the "growth at all costs" playbook is now:
 - **Documented** (you're reading the evidence)
 - **Discoverable** (public GitHub repo)
-- **Actionable** (GDPR, CCPA, CIPA all apply)
+- **Potentially actionable** (GDPR, CCPA, CIPA may apply)
 
 You can either:
-1. **Audit your stack now** and remove liability before it crystallizes
-2. **Wait for the subpoena** and explain why you ignored public evidence
+1. **Audit your stack now** and evaluate liability before it crystallizes
+2. **Wait for external scrutiny** and explain why you didn't act on public evidence
 
-The vendors won't protect you. Your contracts won't protect you. Only your choices will.
+The vendors won't protect you. Your contracts may not protect you. Only your choices will.
 
 ---
 
@@ -138,9 +138,9 @@ zoominfo-gtm-studio/
 ├── methodology/
 │   └── how-we-tested.md     # Reproduction instructions
 └── legal/
-    ├── gdpr-violations.md   # EU compliance analysis
-    ├── ccpa-violations.md   # California privacy law analysis
-    └── cipa-exposure.md     # California wiretapping exposure
+    ├── gdpr-analysis.md     # EU regulation analysis
+    ├── ccpa-analysis.md     # California privacy law analysis
+    └── cipa-exposure.md     # California wiretapping exposure analysis
 ```
 
 ---
@@ -162,28 +162,28 @@ zoominfo-gtm-studio/
 
 ---
 
-## Legal Implications
+## Legal Analysis
 
 ### GDPR (EU)
 - **Article 5(3):** Cookie consent required before tracking
-- **Article 6:** No lawful basis for biometric processing
+- **Article 6:** Lawful basis required for processing
 - **Article 9:** Behavioral biometrics may constitute special category data
 
 ### CCPA/CPRA (California)
-- **Right to Know:** Sardine.ai partnership not disclosed
-- **Right to Opt-Out:** No opt-out before tracking begins
-- **Sale of Personal Information:** Data shared with 40+ third parties
+- **Right to Know:** Sardine.ai partnership not disclosed in privacy policy
+- **Right to Opt-Out:** No opt-out presented before tracking begins
+- **Data Sharing:** Data transmitted to 40+ third parties pre-consent
 
 ### CIPA (California)
-- **Wiretapping:** Biometric collection without consent may constitute wiretapping
-- **Two-party consent:** California requires all-party consent for recording
+- **Wiretapping provisions:** Biometric collection without consent may implicate wiretapping statutes
+- **Two-party consent:** California requires all-party consent for certain recordings
 
 ---
 
 ## The CEO's Response
 
 When presented with documented evidence of:
-- Pre-consent tracking violations
+- Pre-consent tracking
 - Behavioral biometrics collection
 - 118 tracking domains on a single page
 
@@ -191,6 +191,8 @@ The CEO of a publicly traded company chose to:
 - **Block the researcher**
 - NOT dispute the findings
 - NOT provide clarification
+
+*ZoomInfo has not responded to requests for comment on these findings.*
 
 ---
 
@@ -200,9 +202,9 @@ The CEO of a publicly traded company chose to:
 
 The information contained in this evidence pack is provided for informational and educational purposes only. Nothing herein constitutes legal advice, and no attorney-client relationship is created by accessing, reading, or using this information.
 
-**You should consult with a qualified attorney** licensed in your jurisdiction before taking any action based on the information presented here. Privacy law is complex, varies by jurisdiction, and is subject to change. What constitutes a violation in one jurisdiction may not apply in another.
+**You should consult with a qualified attorney** licensed in your jurisdiction before taking any action based on the information presented here. Privacy law is complex, varies by jurisdiction, and is subject to change. What may constitute a violation in one jurisdiction may not apply in another.
 
-**Blackout is not a law firm.** We are ethical marketers, security researchers, and mission-driven experts documenting technical findings about GTM vendor disclosure, Marketing compliance standards, and what can be done to take back the definition of "good marketing" from the "Growth at cost" assholes that stole it. We make no representations or warranties about:
+**Blackout is not a law firm.** We are security researchers documenting technical findings. We make no representations or warranties about:
 - The legal accuracy or completeness of any analysis
 - The applicability of cited regulations to your specific situation
 - The current state of any company's tracking practices (which may change)
@@ -210,7 +212,7 @@ The information contained in this evidence pack is provided for informational an
 
 **All findings are based on publicly observable behavior** at the time of testing. Network captures, decoded configurations, and request timelines represent a point-in-time snapshot. Vendors may modify their practices after publication.
 
-**If you believe you have been harmed** by pre-consent tracking or surveillance practices, consult a privacy attorney or contact your local data protection authority. Do not rely solely on this document to assess your legal rights or remedies.
+**If you believe you have been affected** by pre-consent tracking or surveillance practices, consult a privacy attorney or contact your local data protection authority. Do not rely solely on this document to assess your legal rights or remedies.
 
 By accessing this evidence pack, you acknowledge that you have read and understood this disclaimer.
 
@@ -220,7 +222,7 @@ By accessing this evidence pack, you acknowledge that you have read and understo
 
 This evidence pack is released in the public interest.
 
-Vendor surveillance infrastructure should be transparent and verifiable, not suppressed when documented.
+Vendor tracking infrastructure should be transparent and verifiable, not suppressed when documented.
 
 **Released by:** [Blackout Research](https://deployblackout.com)  
 **Date:** November 25, 2025  
@@ -231,7 +233,7 @@ Vendor surveillance infrastructure should be transparent and verifiable, not sup
 
 **Free forensic scans. 100 domains. 24 hours.**
 
-Find out what YOUR vendors are hiding.
+Find out what YOUR vendors are doing.
 
 → [deployblackout.com](https://deployblackout.com)
 
