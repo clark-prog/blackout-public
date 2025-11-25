@@ -202,7 +202,7 @@ The information contained in this evidence pack is provided for informational an
 
 **You should consult with a qualified attorney** licensed in your jurisdiction before taking any action based on the information presented here. Privacy law is complex, varies by jurisdiction, and is subject to change. What constitutes a violation in one jurisdiction may not apply in another.
 
-**Blackout is not a law firm.** We are security researchers documenting technical findings. We make no representations or warranties about:
+**Blackout is not a law firm.** We are ethical marketers, security researchers, and mission-driven experts documenting technical findings about GTM vendor disclosure, Marketing compliance standards, and what can be done to take back the definition of "good marketing" from the "Growth at cost" assholes that stole it. We make no representations or warranties about:
 - The legal accuracy or completeness of any analysis
 - The applicability of cited regulations to your specific situation
 - The current state of any company's tracking practices (which may change)
