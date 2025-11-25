@@ -1,0 +1,32 @@
+{
+  "loaderInitTime": 1764084620894,
+  "enableBiometrics": true,
+  "enableDNS": true,
+  "revision": "2025-10-28-d4021d2",
+  "origin": "https://www.zoominfo.com",
+  "collectorDomain": "frapi.zoominfo.com",
+  "pixelURL": "https://p.zoominfo.com/v1/b.png",
+  "dBaseDomain": "d.sardine.ai",
+  "location": "https://www.zoominfo.com/products/gtm-studio",
+  "referrer": "",
+  "uuid": "99656dd7-a545-4f6c-8fd4-d0a8288da2bd",
+  "clientId": "7fb5c66f-1918-44dd-b6e6-66bc99a271c8",
+  "sessionKey": "9c8821ba-030e-4169-832e-79d5f88036e8",
+  "userIdHash": "492e69f3-8422-44be-bee1-a49623c0d0e5",
+  "flow": "onboarding",
+  "environment": "production",
+  "partnerId": "zoominfo",
+  "apiSubdomain": "frapi.zoominfo.com",
+  "pixelSubdomain": "p.zoominfo.com",
+  "_metadata": {
+    "source": "URL fragment of frapi.zoominfo.com/assets/collector.min.d4021d2.html",
+    "encoding": "base64",
+    "decoded_date": "2025-11-25",
+    "critical_fields": {
+      "enableBiometrics": "Enables mouse movement, typing pattern, and scroll behavior tracking",
+      "enableDNS": "Enables DNS fingerprinting for device identification",
+      "partnerId": "Confirms formal partnership between ZoomInfo and Sardine.ai",
+      "dBaseDomain": "Sardine.ai's fingerprinting infrastructure domain"
+    }
+  }
+}

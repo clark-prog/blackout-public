@@ -1,217 +1,164 @@
-# BLACKOUT — GTM behavior you can verify
+# ZoomInfo GTM Studio: Pre-Consent Surveillance Evidence
 
-**Built by marketers.** Blackout verifies what buyers see and what browsers load—then certifies it against the Blackout Trust Standard (BTS).
-
-**We don't grade influence. We verify behavior.**
+> **"You can block the researcher. You can't block the evidence."**
 
 ---
 
-## What is Blackout?
+## What Happened
 
-Continuous, disclosure-grade verification for hidden tracking and white-label surveillance.
+On November 25, 2025, ZoomInfo CEO Henry Schuck posted a product demo of GTM Studio on LinkedIn — their AI-powered platform that "identifies person-level website visits."
 
-Detect what's really running after "Reject All," diff it against what you've disclosed, and auto-generate the receipts.
+A security researcher analyzed the GTM Studio landing page and documented extensive pre-consent surveillance infrastructure. The findings were posted as a comment on the CEO's LinkedIn post.
 
-**Claim:** To our knowledge, the first GTM consequence layer.[^1]
-Audits the promise (copy/ads/social) and the payload (runtime/pre-consent), attaches a provenance token, and exports a 48-hour evidence bundle. See [/proof/methodology](https://deployblackout.com/proof/methodology).
+**Within minutes, the researcher was blocked.**
 
-[^1]: Defined at /proof/methodology; matrix versioned.
+No correction. No clarification. Just silence.
 
----
-
-## Why Blackout exists
-
-Security earned its standards (SOC 2, ISO 27001). GTM never did.
-
-Cookie banners and pay-to-play rankings masked a simple fact: identity tech, session replay, and ad pixels still fire after "Reject All."
-
-Blackout makes GTM conduct legible, testable, and enforceable—with receipts.
-
-**We don't argue intent. We publish timing and URLs.**
+This evidence pack ensures the findings cannot be suppressed.
 
 ---
 
-## The compliance landscape (and why it falls short)
+## Key Findings
 
-Nothing in the current compliance landscape touches the behavior of GTM functions the way SOC 2/ISO 27001 cover engineering and security.
-
-**What exists:**
-
-- **SOC 2, ISO 27001, HITRUST, PCI, FedRAMP** – Focus on security and privacy controls for systems and data. GTM tooling is in-scope only when it touches production systems, not for marketing behavior or vendor usage.
-
-- **GDPR, CCPA/CPRA, LGPD, ePrivacy, CASL, CAN-SPAM, TCPA** – Regulate consent, lawful basis, email/SMS outreach, and tracking disclosures. They set legal limits but don't provide a certifiable framework or badge that says, "Your marketing team behaves appropriately."
-
-- **IAB Transparency & Consent Framework, DAA AdChoices, NAI** – Advertising industry self-regulation targeting CMPs and ad-tech consent handling; largely unenforced opt-in systems for programmatic advertising, not comprehensive GTM behavior audits.
-
-- **CMP audits (OneTrust, TrustArc)** – Tools to verify consent banners and ad preferences but do not audit the full stack of vendors or pre-consent behavior.
-
-- **Regulatory settlement agreements (e.g., FTC, CNIL)** – After-the-fact enforcement for egregious tracking, but no proactive framework or ongoing assessment model.
-
-**Net:** No mainstream, certifiable compliance framework currently audits GTM/Sales/Marketing behavior end-to-end (vendor disclosure parity, deanonymization practices, pre-consent tracking, AI SDR outreach). That gap is exactly what Blackout's Trust Standard (BTS) is designed to fill.
+| Finding | Evidence |
+|---------|----------|
+| **50+ tracking requests before consent** | Network capture shows tracking fires before consent banner loads |
+| **Sardine.ai biometrics enabled** | `enableBiometrics: true` in decoded config |
+| **PerimeterX fingerprinting** | Collector fires at request #79 (pre-consent) |
+| **DNS fingerprinting active** | `enableDNS: true` in Sardine config |
+| **118 unique tracking domains** | Contacted on single page load |
+| **Session fingerprinting** | Fraud detection API creates session pre-consent |
 
 ---
 
-## What Blackout does
+## The Smoking Gun
 
-1. **Detect** — Capture post-consent timelines (initiator chains, request URLs, timestamps).
-2. **Diff** — Compare runtime vendors to your sub-processor list and policy.
-3. **Prove** — Hash the evidence pack and issue (or deny) a BTS badge (Bronze/Silver/Gold).
-4. **Enforce** — Critical drift suspends or revokes the badge. Public revocation log.
-
-All verification is performed offline. This site runs no third-party trackers.
-
----
-
-## The Blackout Trust Standard (BTS)
-
-**BTS:** the evidence-based compliance standard for online GTM behavior.
-
-### Control families (evidence, not opinions):
-
-- **Consent governance** — no identity/replay/ads fire after "Reject All"; GPC honored.
-- **Disclosure parity** — your policy & sub-processor list match runtime.
-- **De-anonymization** — explicit, verifiable opt-in or it's out.
-- **Proof** — initiator chains, request URLs, timestamps; bundle hashed (SHA-256).
-- **Attestation** — host `/.well-known/blackout.json`.
-- **Enforcement** — badges can be suspended or revoked.
-
-### Badge tiers (objective):
-
-- **BTS-Bronze (≥70):** No identity/replay/ads post-reject; GPC honored; ≥95% sub-processor parity.
-- **BTS-Silver (≥80):** Bronze + no de-anon without explicit opt-in; 100% disclosure parity.
-- **BTS-Gold (≥90):** Silver + no session replay or fingerprinting; regional consent gating verified.
-
-**Label:** Blackout Trust Standard — {Tier} — Last verified: YYYY-MM-DD
-
----
-
-## Example controls (excerpt)
-
-**BLK-001** Undisclosed Sub-processor
-→ Detected vendor ∉ disclosures → Add & republish with date/version.
-
-**BLK-003** Session Recording Without Consent
-→ replay before consent → Gate behind CMP; honor region logic & GPC.
-
-**BLK-005** CNAME Cloak / Shadow Cookies
-→ third-party via first-party CNAME → Disable until consent; disclose.
-
-**BLK-007** Consent Timing Violation
-→ any identity/replay/ads request < first consent or persists after "Reject All" → Block until known state.
-
-**BLK-021** "Compliant" Claim vs. Reality
-→ privacy-first claim, runtime contradicts → Fix runtime or change copy; no absolutes.
-
-**BLK-023** "Cookieless" but Fingerprinting
-→ canvas/WebGL or server-side forwarding pre-consent → Disclose or remove; align copy.
-
-**Full library:** [/docs/CONTROLS.md](https://deployblackout.com/docs/CONTROLS.md)
-
----
-
-## Scoring & certification
-
-**Formula:**
-Severity (S) 1–5 × Exposure (E) 1–3 (pages × traffic class) + Remediation (R) 1–3 → Non-Compliance Score.
-
-**Critical:** BLK-001/002 or BLK-007 with identity/replay/ads → **BTS-Denied** until fixed.
-
-- **Score <10 & no Critical** → BTS-Bronze candidate
-- **10–19 & no Critical** → BTS-Silver after fixes
-- **≥20 or any Critical** → Denied; re-verify after remediation
-
----
-
-## Minimal UI (week one)
-
-- **Projects:** domain · last scan · score · critical flags · Download Pack
-- **Findings:** detections & gaps with evidence chips `{script|network|global|cookie|inline}`
-- **Controls:** pass/fail by BLK ID with remediation owners
-
----
-
-## Manifest (attestation)
-
-Publish `/.well-known/blackout.json`:
+### Decoded Sardine.ai Configuration
 
 ```json
 {
-  "bts_version": "0.1",
-  "badge": {
-    "tier": "silver",
-    "score": 83,
-    "last_verified": "2025-11-07"
-  },
-  "disclosures": {
-    "policy_url": "https://example.com/privacy",
-    "subprocessors_url": "https://example.com/subprocessors"
-  },
-  "runtime": {
-    "region_gating": true,
-    "consent_gpc_honored": true
-  },
-  "evidence": {
-    "pack_sha256": "7b2c...c1a9",
-    "report_url": "https://example.com/blackout/report.pdf"
-  }
+  "enableBiometrics": true,
+  "enableDNS": true,
+  "partnerId": "zoominfo",
+  "dBaseDomain": "d.sardine.ai",
+  "environment": "production"
 }
+```
+
+This configuration was decoded from a base64-encoded payload in the collector iframe URL.
+
+**Translation:**
+- Mouse movements tracked by default
+- Typing patterns recorded
+- DNS fingerprinting enabled
+- ZoomInfo has a formal partnership with Sardine.ai
+- This is production, not testing
+
+---
+
+## The Irony
+
+ZoomInfo markets GTM Studio as a tool to "identify person-level website visits."
+
+Yet on their **own landing page** for this product, they deploy:
+- **3 external identity/fingerprinting vendors** (Sardine.ai, PerimeterX, IdentityMatrix.ai)
+- **Behavioral biometrics before consent**
+- **118 different tracking domains**
+
+**Even the visitor identification vendor doesn't trust their own product for visitor identification.**
+
+---
+
+## Evidence Contents
+
+```
+zoominfo-gtm-studio/
+├── FINDINGS.md              # Full technical analysis
+├── TIMELINE.md              # CEO post → comment → block sequence
+├── code/
+│   ├── sardine-config.json  # Decoded biometrics configuration
+│   ├── perimeterx.md        # PerimeterX infrastructure details
+│   └── tracking-sequence.md # Complete request timeline
+├── methodology/
+│   └── how-we-tested.md     # Reproduction instructions
+└── legal/
+    ├── gdpr-violations.md   # EU compliance analysis
+    ├── ccpa-violations.md   # California privacy law analysis
+    └── cipa-exposure.md     # California wiretapping exposure
 ```
 
 ---
 
-## Responsible disclosure & revocation
+## How To Verify (5 Minutes)
 
-- **Private remediation window**; dispute → re-scan → logged outcome.
-- **Critical breach:** 72-hour remediation or public suspension.
-- **Public revocation log** keeps the badge honest.
+1. Open Chrome in Incognito mode
+2. Open DevTools (F12) → Network tab
+3. Enable "Preserve log"
+4. Navigate to: `https://www.zoominfo.com/products/gtm-studio`
+5. **DO NOT interact with consent banner**
+6. Count requests that fire before you see the banner
 
-**RFP clause:**
-"Vendor must maintain BTS-Silver or higher and host a valid `/.well-known/blackout.json`. Buyer may perform independent runtime verification prior to award and quarterly thereafter. Badge suspension is grounds for reassessment."
+### What To Look For
 
----
-
-## The Blackout ecosystem
-
-**Blackout for Teams — The Console** (available):
-Private audits for Legal/RevOps with counsel-ready exports.
-
-**Blackout Sensor — The Shield** (roadmap):
-Opt-in Proof Cards for individuals; correlate outreach to detections.
-
-**BLK — The Ledger** (roadmap):
-Evidence-hash registry & attestation APIs; open signature sets; public revocations.
+- `collector-pxosx7m0dx.px-cloud.net` — PerimeterX fingerprinting
+- `*.d.sardine.ai/bg.png` — Sardine behavioral biometrics
+- `gw-app.zoominfo.com/gw/ziapi/fraud-detection` — Session fingerprinting
 
 ---
 
-**Not a blocker, browser, or on-site widget. No legal advice.**
-We provide counsel-ready evidence, not promises.
+## Legal Implications
+
+### GDPR (EU)
+- **Article 5(3):** Cookie consent required before tracking
+- **Article 6:** No lawful basis for biometric processing
+- **Article 9:** Behavioral biometrics may constitute special category data
+
+### CCPA/CPRA (California)
+- **Right to Know:** Sardine.ai partnership not disclosed
+- **Right to Opt-Out:** No opt-out before tracking begins
+- **Sale of Personal Information:** Data shared with 40+ third parties
+
+### CIPA (California)
+- **Wiretapping:** Biometric collection without consent may constitute wiretapping
+- **Two-party consent:** California requires all-party consent for recording
 
 ---
 
-## Get certified / Get involved
+## The CEO's Response
 
-- [Founding Cohort](https://deployblackout.com/#waitlist)
-- [Enterprise Audit](https://deployblackout.com/#waitlist)
-- [Sensor Waitlist](https://deployblackout.com/#waitlist)
+When presented with documented evidence of:
+- Pre-consent tracking violations
+- Behavioral biometrics collection
+- 118 tracking domains on a single page
 
-**Site:** [deployblackout.com](https://deployblackout.com)
-**Email:** hello@deployblackout.com
-
----
-
-## Proof & Evidence
-
-- [Methodology](https://deployblackout.com/proof/methodology)
-- [Verification Matrix](https://deployblackout.com/proof/matrix)
-- [Sample Evidence Pack](https://deployblackout.com/proof/sample-evidence)
+The CEO of a publicly traded company chose to:
+- **Block the researcher**
+- NOT dispute the findings
+- NOT provide clarification
 
 ---
 
-## Promise vs Payload
+## About This Release
 
-![Promise vs Payload](https://deployblackout.com/assets/promise-vs-payload.png)
+This evidence pack is released in the public interest.
 
-**Left:** Landing page claim — "Privacy-first. We don't track you."
-**Right:** HAR capture — `T+84ms → connect.facebook.net/en_US/fbevents.js` (pre-consent)
+Vendor surveillance infrastructure should be transparent and verifiable, not suppressed when documented.
 
-**Download sample evidence** · **Request audit**
+**Released by:** [Blackout Security Research](https://deployblackout.com)  
+**Date:** November 25, 2025  
+**License:** CC BY 4.0 (Attribution required)
+
+---
+
+## Blackout Friday — November 29, 2025
+
+**Free forensic scans. 100 domains. 24 hours.**
+
+Find out what YOUR vendors are hiding.
+
+→ [deployblackout.com](https://deployblackout.com)
+
+---
+
+> *"You can block the researcher.*  
+> *You can't block the evidence."*
