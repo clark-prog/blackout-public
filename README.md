@@ -194,6 +194,28 @@ The CEO of a publicly traded company chose to:
 
 ---
 
+## Legal Disclaimer
+
+**THIS IS NOT LEGAL ADVICE.**
+
+The information contained in this evidence pack is provided for informational and educational purposes only. Nothing herein constitutes legal advice, and no attorney-client relationship is created by accessing, reading, or using this information.
+
+**You should consult with a qualified attorney** licensed in your jurisdiction before taking any action based on the information presented here. Privacy law is complex, varies by jurisdiction, and is subject to change. What constitutes a violation in one jurisdiction may not apply in another.
+
+**Blackout is not a law firm.** We are security researchers documenting technical findings. We make no representations or warranties about:
+- The legal accuracy or completeness of any analysis
+- The applicability of cited regulations to your specific situation
+- The current state of any company's tracking practices (which may change)
+- The outcome of any legal action based on this information
+
+**All findings are based on publicly observable behavior** at the time of testing. Network captures, decoded configurations, and request timelines represent a point-in-time snapshot. Vendors may modify their practices after publication.
+
+**If you believe you have been harmed** by pre-consent tracking or surveillance practices, consult a privacy attorney or contact your local data protection authority. Do not rely solely on this document to assess your legal rights or remedies.
+
+By accessing this evidence pack, you acknowledge that you have read and understood this disclaimer.
+
+---
+
 ## About This Release
 
 This evidence pack is released in the public interest.
