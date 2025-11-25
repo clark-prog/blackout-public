@@ -183,6 +183,8 @@ zoominfo-gtm-studio/
 ---
 
 ## The CEO's Response
+![Alt text](./Screenshot 2025-11-25 100147.png)
+
 
 When presented with documented evidence of:
 - Pre-consent tracking
