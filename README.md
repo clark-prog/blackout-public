@@ -200,9 +200,8 @@ This evidence pack is released in the public interest.
 
 Vendor surveillance infrastructure should be transparent and verifiable, not suppressed when documented.
 
-**Released by:** [Blackout Security Research](https://deployblackout.com)  
+**Released by:** [Blackout Research](https://deployblackout.com)  
 **Date:** November 25, 2025  
-**License:** CC BY 4.0 (Attribution required)
 
 ---
 
