@@ -69,6 +69,62 @@ Yet on their **own landing page** for this product, they deploy:
 
 ---
 
+## For Marketers: Why This Matters To You
+
+You're not a privacy lawyer. You're trying to hit pipeline targets. So why should you care?
+
+### 1. Your Budget Is Buying Legal Exposure
+
+Every dollar spent on vendors with pre-consent violations is a dollar spent on future legal liability. When the class action hits, "we didn't know" isn't a defense — it's an admission of negligence.
+
+**The question isn't IF this data is actionable. It's IF you'll be named in the complaint.**
+
+### 2. Your "Intent Data" Is Legally Toxic
+
+Data collected without consent can't be legally processed. That means:
+- Your lead scores are built on violations
+- Your ABM campaigns target illegally-collected profiles  
+- Your attribution models include tainted signals
+
+You're not optimizing. You're compounding liability.
+
+### 3. Your Customers Are The Plaintiffs
+
+The people you're tracking without consent? They're the same people you're trying to convert. When they find out (and they will), you haven't just lost a deal — you've created an adversary with standing.
+
+**Every visitor is a potential plaintiff. Every page view is evidence.**
+
+### 4. Your Vendor's Compliance Is YOUR Compliance
+
+GDPR Article 26. CCPA 1798.100. Your contracts say "vendor warrants compliance." Courts say you're jointly liable anyway. When ZoomInfo's violations become public record, your legal team will ask: "Who approved this vendor?"
+
+That answer is in your Slack history.
+
+### 5. Your Competitors Will Use This Against You
+
+Imagine losing an enterprise deal because the prospect's security team Googled your martech stack and found this evidence pack. Imagine the RFP question: "Do you use vendors with documented pre-consent violations?"
+
+**Your vendor choices are discoverable. Choose accordingly.**
+
+---
+
+## The Hard Truth
+
+Marketing has operated in a "move fast, ask forgiveness" mode for 15 years. That era is ending.
+
+The surveillance infrastructure that powered the "growth at all costs" playbook is now:
+- **Documented** (you're reading the evidence)
+- **Discoverable** (public GitHub repo)
+- **Actionable** (GDPR, CCPA, CIPA all apply)
+
+You can either:
+1. **Audit your stack now** and remove liability before it crystallizes
+2. **Wait for the subpoena** and explain why you ignored public evidence
+
+The vendors won't protect you. Your contracts won't protect you. Only your choices will.
+
+---
+
 ## Evidence Contents
 
 ```
