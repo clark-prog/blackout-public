@@ -1,3 +1,5 @@
+
+![Blackout's Public FAFO Repo](./blackout_gh_H.png)
 # ZoomInfo GTM Studio: Pre-Consent Tracking Documentation
 
 > **"You can block the researcher. You can't block the evidence."**
